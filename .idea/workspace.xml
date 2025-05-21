@@ -5,6 +5,7 @@
   </component>
   <component name="BackendCodeEditorMiscSettings">
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
   </component>
   <component name="CMakeProjectFlavorService">
     <option name="flavorId" value="CMakePlainProjectFlavor" />
@@ -15,7 +16,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7dcf6ab1-6c9e-4919-8b76-28f7e6361d43" name="Changes" comment="" />
+    <list default="true" id="7dcf6ab1-6c9e-4919-8b76-28f7e6361d43" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database" beforeDir="false" afterPath="$PROJECT_DIR$/database" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.c" beforeDir="false" afterPath="$PROJECT_DIR$/database.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user.c" beforeDir="false" afterPath="$PROJECT_DIR$/user.c" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,11 +70,11 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="C/C++ File.database.c">
+  <component name="RunManager" selected="C/C++ File.main.c">
     <configuration name="database.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Group-02---Book-Donation-and-Exchange-System" TARGET_NAME="database.c" CONFIG_NAME="database.c">
       <option name="sourceFile" value="database.c" />
       <method v="2">
@@ -119,8 +126,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="C/C++ File.database.c" />
         <item itemvalue="C/C++ File.main.c" />
+        <item itemvalue="C/C++ File.database.c" />
       </list>
     </recent_temporary>
   </component>
@@ -133,6 +140,9 @@
       <updated>1747802769012</updated>
       <workItem from="1747802772269" duration="77000" />
       <workItem from="1747806343606" duration="2854000" />
+      <workItem from="1747826093829" duration="1001000" />
+      <workItem from="1747842921080" duration="4851000" />
+      <workItem from="1747852383820" duration="310000" />
     </task>
     <servers />
   </component>

@@ -1,12 +1,25 @@
 #include <stdio.h>
-
-int user() {
+#include "database.h"
+#include <mysql/mysql.h>
+int user()
+{
     int choice;
-    printf("1. Donate"
-        "2. View Book Inventory"
-        "3. Request a Book"
-        "4. Track My Requests"
-        "5. logout");
-    printf ("Enter your choice: ");
+    printf("1. View All Books"
+           "2. Donate Books"
+           "3. Request Book"
+           "4. Search Book"
+           "5. Track My Requests"
+           "6. logout");
+    printf("Enter your choice: ");
     scanf("%d", &choice);
+
+    MYSQL *conn = dbconnect();
+    if (conn == NULL)
+    {
+        fprintf(stderr, "Database connection failed.\n");
+    }
+    if (choice == 1)
+    {
+        fetch_book_details(conn);
+    }
 }
