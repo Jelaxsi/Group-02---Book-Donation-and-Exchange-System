@@ -19,7 +19,7 @@ int main(void)
   
   
 
-  if (mysql_query(conn, "INSERT INTO books VALUES (2,'Hello World')") != 0)                   
+  if (mysql_query(conn, "INSERT INTO books VALUES (20,'Harry potter')") != 0)                   
   {                                                                                                  
     fprintf(stderr, "Query Failure\n");                                                              
     return EXIT_FAILURE;                                                                             
