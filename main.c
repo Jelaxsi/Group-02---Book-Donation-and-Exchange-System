@@ -1,7 +1,10 @@
 #include <stdio.h>
-#include "user.c";
-#include "admin.c";
+#include "user.c"
+#include "admin.c"
+int login_menu();
+void register_account();
 int main(){
+
     int choice;
     choice=login_menu();
 }
@@ -29,7 +32,7 @@ void register_account()
     int role;
     printf("Enter your detail to create account.\n");
     printf("Enter your name: ");
-    scanf("%s",&user.name);
+    scanf("%s",user.name);
     printf("\n");
     printf("Enter your age: ");
     scanf("%d",&user.age);

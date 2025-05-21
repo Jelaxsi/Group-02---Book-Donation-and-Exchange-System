@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BackendCodeEditorMiscSettings">
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
   </component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7dcf6ab1-6c9e-4919-8b76-28f7e6361d43" name="Changes" comment="" />
+    <list default="true" id="7dcf6ab1-6c9e-4919-8b76-28f7e6361d43" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Group-02---Book-Donation-and-Exchange-System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Group-02---Book-Donation-and-Exchange-System.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.exe" beforeDir="false" afterPath="$PROJECT_DIR$/main.exe" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,17 +38,22 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2xOIblq2dh6qn76jR1VQjDBOUu6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "C/C++ File.database.c.executor": "Run",
+    "C/C++ File.main.c.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -40,11 +62,70 @@
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "SEU/IS/22/ICT/068",
+    "git-widget-placeholder": "SEU/IS/22/ICT/075",
+    "last_opened_file_path": "/home/piragenth/Documents/GitHub/Group-02---Book-Donation-and-Exchange-System",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="C/C++ File.database.c">
+    <configuration name="database.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Group-02---Book-Donation-and-Exchange-System" TARGET_NAME="database.c" CONFIG_NAME="database.c">
+      <option name="sourceFile" value="database.c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Group-02---Book-Donation-and-Exchange-System" TARGET_NAME="main.c" CONFIG_NAME="main.c">
+      <option name="sourceFile" value="main.c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="C/C++ File.database.c" />
+        <item itemvalue="C/C++ File.main.c" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="7dcf6ab1-6c9e-4919-8b76-28f7e6361d43" name="Changes" comment="" />
@@ -53,10 +134,15 @@
       <option name="presentableId" value="Default" />
       <updated>1747802769012</updated>
       <workItem from="1747802772269" duration="77000" />
+      <workItem from="1747806343606" duration="1787000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
