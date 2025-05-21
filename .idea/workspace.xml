@@ -16,11 +16,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7dcf6ab1-6c9e-4919-8b76-28f7e6361d43" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Group-02---Book-Donation-and-Exchange-System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Group-02---Book-Donation-and-Exchange-System.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.exe" beforeDir="false" afterPath="$PROJECT_DIR$/main.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.c" beforeDir="false" afterPath="$PROJECT_DIR$/database.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +116,10 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="C/C++ File.database.c" />
+      <item itemvalue="C/C++ File.main.c" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="C/C++ File.database.c" />
@@ -134,7 +135,7 @@
       <option name="presentableId" value="Default" />
       <updated>1747802769012</updated>
       <workItem from="1747802772269" duration="77000" />
-      <workItem from="1747806343606" duration="1787000" />
+      <workItem from="1747806343606" duration="2854000" />
     </task>
     <servers />
   </component>
