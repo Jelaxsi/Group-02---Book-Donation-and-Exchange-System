@@ -5,6 +5,7 @@
 
 MYSQL *dbconnect(void);
 void fetch_book_details(MYSQL *conn);
-void register_user(MYSQL *conn, char name[], char email[], int phone_number, char address[], char role);
+void register_user(MYSQL *conn, char name[], char password[],char email[], int phone_number, char address[], char role);
+char fetch_login_data(MYSQL *conn, char username[], char password[]);
 
 #endif
