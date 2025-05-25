@@ -11,9 +11,8 @@ void user(char username[])
         printf("1. View All Books\n"
                "2. Donate Books\n"
                "3. Request Book\n"
-               "4. Search Book\n"
-               "5. Track My Requests\n"
-               "6. logout\n\n");
+               "4. Track My Requests\n"
+               "5. logout\n\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
@@ -28,14 +27,25 @@ void user(char username[])
         }
         else if (choice == 3)
         {
+            request_book(username);
         }
         else if (choice == 4)
         {
+            MYSQL *conn = dbconnect();
+            if (conn == NULL)
+            {
+                fprintf(stderr, "Database connection failed.\n");
+            }
+
+            if (view_book_req_db_user(conn) == 1)
+            {
+            }
+            else if (view_book_req_db_user(conn) == 0)
+            {
+                printf("\n\n\t No Request pending\n\n");
+            }
         }
         else if (choice == 5)
-        {
-        }
-        else if (choice == 6)
         {
             printf("You have been Logged out of the system! \n\n");
             break;
@@ -91,4 +101,22 @@ void donate_books(char username[])
     printf("Enter the amount books you want to donate: ");
     scanf("%d", &no_of_books);
     donate_books_db(conn, username, book_id, no_of_books);
+}
+
+void request_book(char username[])
+{
+    MYSQL *conn = dbconnect();
+    if (conn == NULL)
+    {
+        fprintf(stderr, "Database connection failed.\n");
+    }
+    view_all_books();
+    printf("\nSelect the book📚 to be requested\n");
+    int no_book_req;
+    int book_id_req;
+    printf("\n\nEnter the Book id of the book: ");
+    scanf("%d", &book_id_req);
+    printf("\n\nEnter the amount of book that you want: ");
+    scanf("%d", &no_book_req);
+    book_req_db(conn, no_book_req, book_id_req, username);
 }

@@ -6,4 +6,8 @@
 void admin(char username[]);
 
 void create_book();
+void remove_users();
+
+void app_rej_req();
+
 #endif
