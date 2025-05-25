@@ -15,7 +15,7 @@ MYSQL *dbconnect(void)
 
     // return EXIT_FAILURE;
   }
-  if (mysql_real_connect(conn, "127.0.0.1", "root", "3559", "book_don_ex_system", 0, NULL, 0) == NULL)
+  if (mysql_real_connect(conn, "127.0.0.1", "root", "SEUSL", "book_don_ex_system", 0, NULL, 0) == NULL)
   {
     fprintf(stderr, "DB Connection Error\n");
     exit(EXIT_FAILURE);
