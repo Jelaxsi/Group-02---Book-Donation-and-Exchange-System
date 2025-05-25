@@ -74,7 +74,7 @@ void register_user(MYSQL *conn, char name[], char password[], char email[], int 
   snprintf(query, sizeof(query), "insert into users (user_name,password,email,phone_number,address,role) values('%s','%s','%s',%d,'%s','%c')", name, password, email, phone_number, address, role);
   if (mysql_query(conn, query))
   {
-    fprintf(stderr, "Query Failure\n");
+    printf("Duplicate Entry");
   }
   else
   {
@@ -297,11 +297,24 @@ void fetch_user_details(MYSQL *conn)
 void remove_users_db(MYSQL *conn, int user_id_rm)
 {
   char query[225];
+  // snprintf(query, sizeof(query), "delete from donation_details where user_id=%d", user_id_rm);
+  // if (mysql_query(conn, query))
+  // {
+  //   fprintf(stderr, "Query Failure\n");
+  // }
+
+  // snprintf(query, sizeof(query), "delete from receiver_details where user_id=%d", user_id_rm);
+  // if (mysql_query(conn, query))
+  // {
+  //   fprintf(stderr, "Query Failure\n");
+  // }
+
   snprintf(query, sizeof(query), "delete from users where user_id=%d", user_id_rm);
   if (mysql_query(conn, query))
   {
     fprintf(stderr, "Query Failure\n");
   }
+
   else
   {
     printf("\n\n\n User removed successfully.\n\n\n");
