@@ -1,25 +1,94 @@
 #include <stdio.h>
 #include "database.h"
 #include <mysql/mysql.h>
-int user()
+#include "user.h"
+
+void user(char username[])
 {
-    int choice;
-    printf("1. View All Books"
-           "2. Donate Books"
-           "3. Request Book"
-           "4. Search Book"
-           "5. Track My Requests"
-           "6. logout");
-    printf("Enter your choice: ");
-    scanf("%d", &choice);
+    while (1)
+    {
+        int choice;
+        printf("1. View All Books\n"
+               "2. Donate Books\n"
+               "3. Request Book\n"
+               "4. Search Book\n"
+               "5. Track My Requests\n"
+               "6. logout\n\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        if (choice == 1)
+        {
+            view_all_books();
+        }
+
+        else if (choice == 2)
+        {
+            donate_books(username);
+        }
+        else if (choice == 3)
+        {
+        }
+        else if (choice == 4)
+        {
+        }
+        else if (choice == 5)
+        {
+        }
+        else if (choice == 6)
+        {
+            printf("You have been Logged out of the system! \n\n");
+            break;
+        }
+    }
+}
+
+void view_all_books()
+{
+    MYSQL_ROW row;
+    MYSQL *conn = dbconnect();
+    if (conn == NULL)
+    {
+        fprintf(stderr, "Database connection failed.\n");
+    }
+
+    MYSQL_RES *res = fetch_book_details(conn);
+    if (res == NULL)
+    {
+        fprintf(stderr, "mysql_store_result() failed. Error: %s\n", mysql_error(conn));
+        mysql_close(conn);
+        exit(EXIT_FAILURE);
+    }
+    printf("Book ID\tBook Title\tAuthor\tGenre\tLanguage\n");
+
+    while ((row = mysql_fetch_row(res)))
+    {
+        for (int i = 0; i < mysql_num_fields(res); i++)
+        {
+            printf("%s\t", row[i] ? row[i] : "NULL");
+        }
+        printf("\n");
+    }
+    printf("\n\n");
+}
+
+int book_id;
+int no_of_books;
+void donate_books(char username[])
+{
 
     MYSQL *conn = dbconnect();
     if (conn == NULL)
     {
         fprintf(stderr, "Database connection failed.\n");
     }
-    if (choice == 1)
-    {
-        fetch_book_details(conn);
-    }
+    view_all_books();
+    printf("Select a book from this list to donate!\n\n\n");
+    printf("Enter a book id to Donate: ");
+    scanf("%d", &book_id);
+
+    printf("\n");
+    printf("Enter the amount books you want to donate: ");
+    scanf("%d", &no_of_books);
+    donate_books_db(conn, username, book_id, no_of_books);
 }

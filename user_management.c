@@ -2,8 +2,8 @@
 #include <mysql/mysql.h>
 #include "database.h"
 #include <string.h>
+#include "user_management.h"
 
-// create account
 struct user
 {
     char role;
