@@ -30,9 +30,9 @@ int login_menu()
         {
             printf("\nEnter your login credintials\n");
             printf("Enter the username: ");
-            scanf("%s", username);
+            scanf(" %[^\n]s", username);
             printf("Enter your password: ");
-            scanf("%s", password);
+            scanf(" %[^\n]s", password);
             MYSQL *conn = dbconnect();
             if (conn == NULL)
             {

@@ -19,21 +19,19 @@ void register_account()
     int role;
     printf("\n\nEnter your detail to create account.\n\n");
     printf("Enter your name: ");
-    scanf("%s", user.name);
+    scanf(" %[^\n]s", user.name);
     printf("\n");
     printf("Create a password: ");
-    scanf("%s", user.password);
+    scanf(" %[^\n]s", user.password);
     printf("\n");
     printf("Enter your email: ");
-    scanf("%s", user.email);
+    scanf(" %[^\n]s", user.email);
     printf("\n");
     printf("Enter your phone number: ");
     scanf("%d", &user.phone_number);
     printf("\n");
     printf("Enter your address: ");
-    getchar(); // flush newline from previous input
-    fgets(user.address, sizeof(user.address), stdin);
-    user.address[strcspn(user.address, "\n")] = 0;
+    scanf(" %[^\n]s", user.address);
     printf("\n");
     printf("1. Admin\n2. User \nEnter the number for your role : ");
     scanf("%d", &role);

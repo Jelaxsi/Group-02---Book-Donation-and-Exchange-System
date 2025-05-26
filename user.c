@@ -82,7 +82,7 @@ void view_all_books()
         {
             for (int i = 0; i < mysql_num_fields(res); i++)
             {
-                printf("%s\t", row[i] ? row[i] : "NULL");
+                printf("\t", row[i] ? row[i] : "NULL");
             }
             printf("\n");
         }
