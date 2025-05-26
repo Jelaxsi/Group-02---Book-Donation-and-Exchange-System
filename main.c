@@ -1,41 +1,74 @@
 #include <stdio.h>
-#include "user.c";
-#include "admin.c";
-int main(){
-    int choice;
-    choice=login_menu();
+#include "user.h"
+#include "user_management.h"
+#include "database.h"
+#include <mysql/mysql.h>
+#include "admin.h"
+int login_menu();
+
+int main()
+{
+    login_menu();
 }
 
-int login_menu() {
-    printf("1. Login\n"
-        "2. Register\n"
-        "3. Exit\n");
+int login_menu()
+{
+    char username[30];
+    char password[30];
     int choice;
-    printf("Enter your choice: ");
-    scanf("%d", &choice);
-    if (choice == 2){register_account();}
-}
+    printf("\n\n\t\tWelcome to Book Donation and Exchange System 📔📚📖\n\n");
+    while (1)
+    {
+        printf("1. Login\n"
+               "2. Register\n"
+               "3. Exit\n");
 
-//create account
-struct user
-{
-    char role;
-    char name[20];
-    int age;
-};
-void register_account()
-{
-    struct user user;
-    int role;
-    printf("Enter your detail to create account.\n");
-    printf("Enter your name: ");
-    scanf("%s",&user.name);
-    printf("\n");
-    printf("Enter your age: ");
-    scanf("%d",&user.age);
-    printf("\n");
-    printf("1. Admin\n2. User \nEnter your role : ");
-    scanf("%d",&role);
-    if (role == 1){user.role = 'a';}
-    else if (role == 2){user.role = 'u';}
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        if (choice == 1)
+        {
+            printf("\nEnter your login credintials\n");
+            printf("Enter the username: ");
+            scanf("%s", username);
+            printf("Enter your password: ");
+            scanf("%s", password);
+            MYSQL *conn = dbconnect();
+            if (conn == NULL)
+            {
+                fprintf(stderr, "Database Connection failes,\n");
+            }
+            char user_role = fetch_login_data(conn, username, password);
+            if (user_role == '\0')
+            {
+                printf("Invalid username or password.\n");
+                mysql_close(conn);
+                continue;
+            }
+            if (user_role == 'a')
+            {
+                admin(username);
+            }
+            else if (user_role == 'u')
+            {
+                user(username);
+            }
+        }
+        else if (choice == 2)
+        {
+            register_account();
+        }
+        else if (choice == 3)
+        {
+            printf("\n\n\nThanks for using Books donation and exchange system\n\n");
+            printf("\t\tta-ta Bye! Bye! 👋👋\n\n");
+            break;
+        }
+        else
+        {
+            printf("\n\n\nWrong option \n");
+            printf("Enter a valid option\n\n");
+            // break;
+        }
+    }
 }

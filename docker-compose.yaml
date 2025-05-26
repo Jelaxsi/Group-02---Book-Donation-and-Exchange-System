@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-book-don-ex-system
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: SEUSL
+      MYSQL_DATABASE: book_don_ex_system
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
