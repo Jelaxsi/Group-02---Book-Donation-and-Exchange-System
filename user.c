@@ -5,11 +5,13 @@
 
 void user(char username[])
 {
+    printf("\n\n\n\t\t\tHi👋 %s \n\t\tYou have logged in as User\n\n", username);
+    printf("---------------------------------------------------------\n\n");
+
     while (1)
     {
+
         int choice;
-        printf("\n\n\n\t\t\tHi👋 %s \n\t\tYou have logged in as User\n\n", username);
-        printf("---------------------------------------------------------\n\n");
         printf("1. View All Books\n"
                "2. Donate Books\n"
                "3. Request Book\n"
