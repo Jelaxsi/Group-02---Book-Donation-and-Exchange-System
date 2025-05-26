@@ -8,6 +8,8 @@ void admin(char username[])
     while (1)
     {
         int choice;
+        printf("\n\n\n\t\t\tHi👋 %s \n\t\tYou have logged in as Admin\n\n", username);
+        printf("---------------------------------------------------------\n\n");
         printf("1. View all Books \n"
                "2. Approve/Reject Request\n"
                "3. View all book requests\n"

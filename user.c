@@ -8,6 +8,8 @@ void user(char username[])
     while (1)
     {
         int choice;
+        printf("\n\n\n\t\t\tHi👋 %s \n\t\tYou have logged in as User\n\n", username);
+        printf("---------------------------------------------------------\n\n");
         printf("1. View All Books\n"
                "2. Donate Books\n"
                "3. Request Book\n"
@@ -69,15 +71,23 @@ void view_all_books()
         mysql_close(conn);
         exit(EXIT_FAILURE);
     }
-    printf("Book ID\tBook Title\tAuthor\tGenre\tLanguage\n");
-
-    while ((row = mysql_fetch_row(res)))
+    row = mysql_fetch_row(res);
+    if (row)
     {
-        for (int i = 0; i < mysql_num_fields(res); i++)
+        printf("Book ID\tBook Title\tAuthor\tGenre\tLanguage\n");
+        mysql_data_seek(res, 0);
+        while ((row = mysql_fetch_row(res)))
         {
-            printf("%s\t", row[i] ? row[i] : "NULL");
+            for (int i = 0; i < mysql_num_fields(res); i++)
+            {
+                printf("%s\t", row[i] ? row[i] : "NULL");
+            }
+            printf("\n");
         }
-        printf("\n");
+    }
+    else
+    {
+        printf("\t\t\n\nThere are No Book Available.😕\n");
     }
     printf("\n\n");
 }
