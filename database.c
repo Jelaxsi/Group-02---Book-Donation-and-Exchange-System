@@ -375,7 +375,7 @@ void app_rej_req_db(MYSQL *conn, int receiver_id, int response)
   MYSQL_ROW row;
   char query[1024];
   snprintf(query, sizeof(query), "update receiver_details set request_status='%s' where receiver_id=%d", response_char, receiver_id);
-  printf("%s", query);
+
   if (mysql_query(conn, query) != 0)
   {
     fprintf(stderr, "SELECT query failed. Error: %s\n", mysql_error(conn));
