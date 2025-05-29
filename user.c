@@ -85,7 +85,7 @@ void view_all_books()
         {
             // printf("printing line of books");
 
-            printf(row[i] ? row[i] : "NULL");
+            printf("%s",row[i] ? row[i] : "NULL");
             printf("\t");
         }
         printf("\n");
