@@ -2,6 +2,7 @@
 #include "database.h"
 #include <mysql/mysql.h>
 #include "user.h"
+#include <stdlib.h>
 
 void user(char username[])
 {
