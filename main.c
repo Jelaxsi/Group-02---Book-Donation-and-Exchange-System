@@ -16,7 +16,9 @@ int login_menu()
     char username[30];
     char password[30];
     int choice;
+
     printf("\n\n\t\tWelcome to Book Donation and Exchange System 📔📚📖\n\n");
+
     while (1)
     {
         printf("1. Login\n"
@@ -30,9 +32,9 @@ int login_menu()
         {
             printf("\nEnter your login credintials\n");
             printf("Enter the username: ");
-            scanf("%s", username);
+            scanf(" %[^\n]s", username);
             printf("Enter your password: ");
-            scanf("%s", password);
+            scanf(" %[^\n]s", password);
             MYSQL *conn = dbconnect();
             if (conn == NULL)
             {

@@ -276,13 +276,13 @@ void fetch_user_details(MYSQL *conn)
   {
     for (int i = 0; i < mysql_num_fields(res); i++)
     {
-      if (i == 2 & *row[2] == 'a')
+      if (i == 7 & *row[7] == 'a')
       {
-        printf("Admin\t");
+        printf("\tAdmin");
       }
-      else if (i == 2 & *row[2] == 'u')
+      else if (i == 7 & *row[7] == 'u')
       {
-        printf("User\t");
+        printf("\tUser");
       }
       else
       {
@@ -375,7 +375,7 @@ void app_rej_req_db(MYSQL *conn, int receiver_id, int response)
   MYSQL_ROW row;
   char query[1024];
   snprintf(query, sizeof(query), "update receiver_details set request_status='%s' where receiver_id=%d", response_char, receiver_id);
-  printf("%s", query);
+
   if (mysql_query(conn, query) != 0)
   {
     fprintf(stderr, "SELECT query failed. Error: %s\n", mysql_error(conn));

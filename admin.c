@@ -81,13 +81,13 @@ void create_book()
     }
     printf("\n\nEnter Book Details to add\n\n");
     printf("Book Title: ");
-    scanf("%s", Boot_title);
+    scanf(" %[^\n]s", Boot_title);
     printf("\nAuthor: ");
-    scanf("%s", author);
+    scanf(" %[^\n]s", author);
     printf("\nGenre: ");
-    scanf("%s", genre);
+    scanf(" %[^\n]s", genre);
     printf("\nLanguage: ");
-    scanf("%s", language);
+    scanf(" %[^\n]s", language);
     create_book_db(conn, Boot_title, author, genre, language);
 };
 
