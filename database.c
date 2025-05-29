@@ -276,13 +276,13 @@ void fetch_user_details(MYSQL *conn)
   {
     for (int i = 0; i < mysql_num_fields(res); i++)
     {
-      if (i == 2 & *row[2] == 'a')
+      if (i == 7 & *row[7] == 'a')
       {
-        printf("Admin\t");
+        printf("\tAdmin");
       }
-      else if (i == 2 & *row[2] == 'u')
+      else if (i == 7 & *row[7] == 'u')
       {
-        printf("User\t");
+        printf("\tUser");
       }
       else
       {
