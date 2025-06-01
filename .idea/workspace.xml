@@ -16,13 +16,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7dcf6ab1-6c9e-4919-8b76-28f7e6361d43" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/admin.c" beforeDir="false" afterPath="$PROJECT_DIR$/admin.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin.h" beforeDir="false" afterPath="$PROJECT_DIR$/admin.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.c" beforeDir="false" afterPath="$PROJECT_DIR$/database.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.h" beforeDir="false" afterPath="$PROJECT_DIR$/database.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-    </list>
+    <list default="true" id="7dcf6ab1-6c9e-4919-8b76-28f7e6361d43" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,6 +141,7 @@
       <workItem from="1748146444573" duration="53000" />
       <workItem from="1748280263818" duration="12000" />
       <workItem from="1748412407533" duration="9000" />
+      <workItem from="1748770418638" duration="602000" />
     </task>
     <servers />
   </component>
