@@ -2,6 +2,7 @@
 #include "database.h"
 #include <mysql/mysql.h>
 #include "user.h"
+#include <stdlib.h>
 
 void user(char username[])
 {
@@ -84,7 +85,7 @@ void view_all_books()
         {
             // printf("printing line of books");
 
-            printf(row[i] ? row[i] : "NULL");
+            printf("%s",row[i] ? row[i] : "NULL");
             printf("\t");
         }
         printf("\n");
