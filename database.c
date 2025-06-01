@@ -193,7 +193,7 @@ void book_req_db(MYSQL *conn, int no_book_req, int book_id_req, char username[])
     }
     else
     {
-      printf("\n\tYour request has benn sent to the admin for the approval. ☺️\n\n\n ");
+      printf("\n\tYour request has benn sent to the admin for the approval. ☺\n\n\n ");
     }
   }
 }
@@ -382,7 +382,34 @@ void app_rej_req_db(MYSQL *conn, int receiver_id, int response)
   }
   else
   {
-    printf("\n\n\tStatus Updated Successfully ☺️\n\n\n");
+    printf("\n\n\tStatus Updated Successfully ☺\n\n\n");
+  }
+}
+
+void remove_book_db(MYSQL *conn, int book_id_rm)
+{
+  char query[225];
+  // snprintf(query, sizeof(query), "delete from donation_details where user_id=%d", user_id_rm);
+  // if (mysql_query(conn, query))
+  // {
+  //   fprintf(stderr, "Query Failure\n");
+  // }
+
+  // snprintf(query, sizeof(query), "delete from receiver_details where user_id=%d", user_id_rm);
+  // if (mysql_query(conn, query))
+  // {
+  //   fprintf(stderr, "Query Failure\n");
+  // }
+
+  snprintf(query, sizeof(query), "delete from books where book_id=%d", book_id_rm);
+  if (mysql_query(conn, query))
+  {
+    fprintf(stderr, "Query Failure\n");
+  }
+
+  else
+  {
+    printf("\n\n\nBook removed successfully.\n\n\n");
   }
 }
 
