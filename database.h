@@ -17,4 +17,5 @@ void remove_users_db(MYSQL *conn, int user_id_rm);
 int view_book_req_db(MYSQL *conn);
 int view_book_req_db_user(MYSQL *conn);
 void app_rej_req_db(MYSQL *conn, int receiver_id, int response);
+void remove_book_db(MYSQL *conn, int book_id);
 #endif

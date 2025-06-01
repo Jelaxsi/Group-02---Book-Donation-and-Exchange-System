@@ -12,10 +12,10 @@ CREATE TABLE IF NOT EXISTS books (
 
 CREATE TABLE IF NOT EXISTS users (
   User_id INT AUTO_INCREMENT PRIMARY KEY,
-  User_name  VARCHAR(100),
+  User_name  VARCHAR(100) unique,
   password VARCHAR(100),
-  email VARCHAR(100),
-  phone_number int,
+  email VARCHAR(100) unique,
+  phone_number int unique,
   address VARCHAR(300),
   registed_date DATETIME DEFAULT CURRENT_TIMESTAMP,
   role VARCHAR(1)

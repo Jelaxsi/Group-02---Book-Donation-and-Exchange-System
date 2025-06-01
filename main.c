@@ -70,7 +70,6 @@ int login_menu()
         {
             printf("\n\n\nWrong option \n");
             printf("Enter a valid option\n\n");
-            // break;
         }
     }
 }
