@@ -74,11 +74,11 @@ void view_all_books()
         mysql_close(conn);
         exit(EXIT_FAILURE);
     }
-    // row = mysql_fetch_row(res);
-    // if (row)
-    // {
+    row = mysql_fetch_row(res);
+    if (row)
+    {
     printf("Book ID\tBook Title\tAuthor\tGenre\tLanguage\n");
-    // mysql_data_seek(res, 0);
+    mysql_data_seek(res, 0);
     while ((row = mysql_fetch_row(res)))
     {
         for (int i = 0; i < mysql_num_fields(res); i++)
@@ -90,11 +90,11 @@ void view_all_books()
         }
         printf("\n");
     }
-    // }
-    // else
-    // {
-    //     printf("\t\t\n\nThere are No Book Available.😕\n");
-    // }
+    }
+    else
+    {
+        printf("\t\t\n\nThere are No Book Available.😕\n");
+    }
     printf("\n\n");
 }
 
