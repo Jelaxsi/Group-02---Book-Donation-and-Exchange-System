@@ -16,3 +16,14 @@ services:
 
 #volumes:
 #  mysql_data:
+  compiler:
+    build: .
+    image: ubuntu-gcc:latest
+    container_name: ubuntu-gcc
+    restart: unless-stopped
+    volumes: 
+    - ./:/Book_system
+    network_mode: "host"
+    working_dir: /Book_system
+    command: sh -c "cd /Book_system && gcc main.c database.c user_management.c user.c admin.c -o book_system -lmysqlclient && tail -f /dev/null"
+

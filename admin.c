@@ -4,8 +4,6 @@
 #include "admin.h"
 #include "user.h"
 
-
-
 void admin(char username[])
 {
     printf("\n\n\n\t\t\tHi👋 %s \n\t\tYou have logged in as Admin\n\n", username);

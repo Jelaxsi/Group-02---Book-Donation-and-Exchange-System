@@ -412,3 +412,30 @@ void remove_book_db(MYSQL *conn, int book_id_rm)
     printf("\n\n\nBook removed successfully.\n\n\n");
   }
 }
+
+void remove_book_db(MYSQL *conn, int book_id_rm)
+{
+  char query[225];
+  // snprintf(query, sizeof(query), "delete from donation_details where user_id=%d", user_id_rm);
+  // if (mysql_query(conn, query))
+  // {
+  //   fprintf(stderr, "Query Failure\n");
+  // }
+
+  // snprintf(query, sizeof(query), "delete from receiver_details where user_id=%d", user_id_rm);
+  // if (mysql_query(conn, query))
+  // {
+  //   fprintf(stderr, "Query Failure\n");
+  // }
+
+  snprintf(query, sizeof(query), "delete from books where book_id=%d", book_id_rm);
+  if (mysql_query(conn, query))
+  {
+    fprintf(stderr, "Query Failure\n");
+  }
+
+  else
+  {
+    printf("\n\n\nBook removed successfully.\n\n\n");
+  }
+}
