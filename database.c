@@ -198,11 +198,11 @@ void book_req_db(MYSQL *conn, int no_book_req, int book_id_req, char username[])
   }
 }
 
-int view_book_req_db_user(MYSQL *conn)
+void view_book_req_db_user(MYSQL *conn)
 {
   MYSQL_RES *res;
   MYSQL_ROW row;
-  if (mysql_query(conn, "select receiver_id,user_name,Book_title,no_of_books,requested_date,request_status from receiver_details inner join books on receiver_details.book_id=books.book_id inner join users on users.user_id=receiver_details.user_id where request_status='pending'") != 0)
+  if (mysql_query(conn, "select receiver_id,user_name,Book_title,no_of_books,requested_date,request_status from receiver_details inner join books on receiver_details.book_id=books.book_id inner join users on users.user_id=receiver_details.user_id") != 0)
   {
     fprintf(stderr, "SELECT query failed. Error: %s\n", mysql_error(conn));
   }
@@ -216,24 +216,16 @@ int view_book_req_db_user(MYSQL *conn)
   }
 
   row = mysql_fetch_row(res);
-  if (row)
-  {
 
-    printf("Receiver ID\tUser Name\tBook Title\t Number of Requsted Books\tDate Requested\tRequest Status\n");
-    mysql_data_seek(res, 0);
-    while ((row = mysql_fetch_row(res)))
-    {
-      for (int i = 0; i < mysql_num_fields(res); i++)
-      {
-        printf("%s\t", row[i] ? row[i] : "NULL");
-      }
-      printf("\n");
-    }
-    return 1;
-  }
-  else
+  printf("Receiver ID\tUser Name\tBook Title\t Number of Requsted Books\tDate Requested\tRequest Status\n");
+  mysql_data_seek(res, 0);
+  while ((row = mysql_fetch_row(res)))
   {
-    return 0;
+    for (int i = 0; i < mysql_num_fields(res); i++)
+    {
+      printf("%s\t", row[i] ? row[i] : "NULL");
+    }
+    printf("\n");
   }
 }
 
@@ -383,33 +375,6 @@ void app_rej_req_db(MYSQL *conn, int receiver_id, int response)
   else
   {
     printf("\n\n\tStatus Updated Successfully ☺\n\n\n");
-  }
-}
-
-void remove_book_db(MYSQL *conn, int book_id_rm)
-{
-  char query[225];
-  // snprintf(query, sizeof(query), "delete from donation_details where user_id=%d", user_id_rm);
-  // if (mysql_query(conn, query))
-  // {
-  //   fprintf(stderr, "Query Failure\n");
-  // }
-
-  // snprintf(query, sizeof(query), "delete from receiver_details where user_id=%d", user_id_rm);
-  // if (mysql_query(conn, query))
-  // {
-  //   fprintf(stderr, "Query Failure\n");
-  // }
-
-  snprintf(query, sizeof(query), "delete from books where book_id=%d", book_id_rm);
-  if (mysql_query(conn, query))
-  {
-    fprintf(stderr, "Query Failure\n");
-  }
-
-  else
-  {
-    printf("\n\n\nBook removed successfully.\n\n\n");
   }
 }
 
