@@ -216,16 +216,22 @@ void view_book_req_db_user(MYSQL *conn)
   }
 
   row = mysql_fetch_row(res);
-
-  printf("Receiver ID\tUser Name\tBook Title\t Number of Requsted Books\tDate Requested\tRequest Status\n");
-  mysql_data_seek(res, 0);
-  while ((row = mysql_fetch_row(res)))
+  if (row)
   {
-    for (int i = 0; i < mysql_num_fields(res); i++)
+    printf("Receiver ID\tUser Name\tBook Title\t Number of Requsted Books\tDate Requested\tRequest Status\n");
+    mysql_data_seek(res, 0);
+    while ((row = mysql_fetch_row(res)))
     {
-      printf("%s\t", row[i] ? row[i] : "NULL");
+      for (int i = 0; i < mysql_num_fields(res); i++)
+      {
+        printf("%s\t", row[i] ? row[i] : "NULL");
+      }
+      printf("\n");
     }
-    printf("\n");
+  }
+  else
+  {
+    printf("\n\n\tThere is no Requests\n\n");
   }
 }
 
