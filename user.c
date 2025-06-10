@@ -2,6 +2,7 @@
 #include "database.h"
 #include <mysql/mysql.h>
 #include "user.h"
+#include <stdlib.h>
 
 void user(char username[])
 {
@@ -41,13 +42,7 @@ void user(char username[])
                 fprintf(stderr, "Database connection failed.\n");
             }
 
-            if (view_book_req_db_user(conn) == 1)
-            {
-            }
-            else if (view_book_req_db_user(conn) == 0)
-            {
-                printf("\n\n\t No Request pending\n\n");
-            }
+            view_book_req_db_user(conn);
         }
         else if (choice == 5)
         {
@@ -73,27 +68,27 @@ void view_all_books()
         mysql_close(conn);
         exit(EXIT_FAILURE);
     }
-    // row = mysql_fetch_row(res);
-    // if (row)
-    // {
-    printf("Book ID\tBook Title\tAuthor\tGenre\tLanguage\n");
-    // mysql_data_seek(res, 0);
-    while ((row = mysql_fetch_row(res)))
+    row = mysql_fetch_row(res);
+    if (row)
     {
-        for (int i = 0; i < mysql_num_fields(res); i++)
+        printf("Book ID\tBook Title\tAuthor\tGenre\tLanguage\n");
+        mysql_data_seek(res, 0);
+        while ((row = mysql_fetch_row(res)))
         {
-            // printf("printing line of books");
+            for (int i = 0; i < mysql_num_fields(res); i++)
+            {
+                // printf("printing line of books");
 
-            printf(row[i] ? row[i] : "NULL");
-            printf("\t");
+                printf("%s", row[i] ? row[i] : "NULL");
+                printf("\t");
+            }
+            printf("\n");
         }
-        printf("\n");
     }
-    // }
-    // else
-    // {
-    //     printf("\t\t\n\nThere are No Book Available.😕\n");
-    // }
+    else
+    {
+        printf("\t\t\n\nThere are No Book Available.😕\n");
+    }
     printf("\n\n");
 }
 

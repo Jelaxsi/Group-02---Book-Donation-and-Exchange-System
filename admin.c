@@ -3,6 +3,7 @@
 #include "database.h"
 #include "admin.h"
 #include "user.h"
+
 void admin(char username[])
 {
     printf("\n\n\n\t\t\tHi👋 %s \n\t\tYou have logged in as Admin\n\n", username);
@@ -17,7 +18,8 @@ void admin(char username[])
                "4. Create Book\n"
                "5. View all Users\n"
                "6. Remove Users\n"
-               "7. Logout\n\n");
+               "7. Remove Book\n"
+               "8. Logout\n\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
         if (choice == 1)
@@ -66,7 +68,15 @@ void admin(char username[])
 
         else if (choice == 7)
         {
+            remove_book();
+        }
+        else if (choice == 8)
+        {
             break;
+        }
+        else
+        {
+            printf("\n\n\n\t\tEnter a Valid Option\n");
         }
     }
 }
@@ -131,4 +141,18 @@ void app_rej_req()
     {
         printf("\n\n\t No Request pending\n\n");
     }
+}
+
+void remove_book()
+{
+    int book_id_rm;
+    MYSQL *conn = dbconnect();
+    if (conn == NULL)
+    {
+        fprintf(stderr, "Database connection failed.\n");
+    }
+    view_all_books();
+    printf("Enter book id of the Book that u want to remove: ");
+    scanf("%d", &book_id_rm);
+    remove_book_db(conn, book_id_rm);
 }

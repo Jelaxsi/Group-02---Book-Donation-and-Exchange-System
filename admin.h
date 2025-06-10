@@ -10,4 +10,5 @@ void remove_users();
 
 void app_rej_req();
 
+void remove_book();
 #endif

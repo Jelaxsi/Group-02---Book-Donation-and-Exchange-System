@@ -18,7 +18,18 @@ int login_menu()
     int choice;
 
     printf("\n\n\t\tWelcome to Book Donation and Exchange System 📔📚📖\n\n");
-
+    printf("               .--.   _\n");
+    printf("             .---|__| .((\\=.\n");
+    printf("          .--|===|--|/    ,(,\n");
+    printf("          |  |===|  |\\      y\n");
+    printf("          |%%|   |  | `.__,\'\n");
+    printf("          |%%|   |  | /  \\\\\n");
+    printf("          |  |   |  |/|  | \\`----.\n");
+    printf("          |  |   |  ||\\  \\  |___.'_\n");
+    printf("         _|  |   |__||,\\  \\-+-._.' )_\n");
+    printf("        / |  |===|--|\\  \\  \\      /  \\\n");
+    printf("       /  `--^---'--' `--`-'---^-'    \\\n");
+    printf("      '================================`\n\n");
     while (1)
     {
         printf("1. Login\n"
@@ -70,7 +81,6 @@ int login_menu()
         {
             printf("\n\n\nWrong option \n");
             printf("Enter a valid option\n\n");
-            // break;
         }
     }
 }
